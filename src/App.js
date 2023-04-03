@@ -1,7 +1,6 @@
 import Menu from "./components/MenuComponents";
 import { DISHES } from "./shared/dishes";
 import { Component } from "react";
-import { Row, Container } from "reactstrap";
 class App extends Component {
   constructor(props) {
     super(props);

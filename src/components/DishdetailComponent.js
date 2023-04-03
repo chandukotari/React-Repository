@@ -1,35 +1,15 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  Container,
-  Col,
-  Row,
-} from "reactstrap";
-import { DISHES } from "../shared/dishes";
+import { CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 const Dishdetailed = (props) => {
   if (props != null) {
     const { dish } = props;
     return (
       <div className="Container">
         <div className="Row">
-          <div className="col-12 col-md-5 m-1">
-            {RenderDish({ dish })}
-            <p>Hai</p>
-            <p>Hello</p>
-          </div>
+          <div className="col-12 col-md-5 m-1">{RenderDish({ dish })}</div>
           <div className="col-12 col-md-5 m-1">
             <h4>Comments</h4>
             {RenderComments(dish.comments)}
-          </div>
-        </div>
-        <div className="container">
-          <div className="col">
-            <p>Hai</p>
-            <p>Hello</p>
           </div>
         </div>
       </div>
@@ -40,11 +20,11 @@ const RenderDish = (props) => {
   if (props != null) {
     const { dish } = props;
     return (
-      <div>
+      <div className="col-12 col-5 m-1" key={dish.id}>
         <CardImg width="10%" src={dish.image} alt={dish.name} />
         <CardBody>
           <CardTitle tag="h3">{dish.name}</CardTitle>
-          <CardText className="col-6 col-5 m-1" key={dish.id}>
+          <CardText>
             {dish.description}
           </CardText>
         </CardBody>
