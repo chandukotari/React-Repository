@@ -14,7 +14,7 @@ class Menu extends Component {
   }
   renderDish(dish) {
     if (dish != null) return <DishDetail dish={dish} />;
-    else return <div></div>;
+    else return <div />;
   }
   render() {
     const menu = this.props.dishes.map((dish) => {

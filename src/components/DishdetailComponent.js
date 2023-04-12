@@ -22,7 +22,7 @@ class DishDetail extends Component {
             );
         else
             return (
-                <div></div>
+                <div />
             );
     }
     renderComments(dish) {
@@ -49,7 +49,7 @@ class DishDetail extends Component {
         }
         else{
             return(
-                <div></div>
+                <div />
             );
         }
     }
