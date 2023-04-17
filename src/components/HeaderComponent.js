@@ -5,8 +5,8 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  Jumbotron,
 } from "reactstrap";
+import {Jumbotron} from "reactstrap";
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -65,7 +65,7 @@ class Header extends Component {
             </Collapse>
           </div>
         </Navbar>
-        <div>
+        <div className="jumbotron">
           <div className="container">
             <div className="row row-header">
               <div className="col-12 col-sm-6">
