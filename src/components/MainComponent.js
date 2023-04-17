@@ -54,10 +54,6 @@ class Main extends Component {
     return (
       <div>
         <Header />
-        <Menu
-          dishes={this.state.dishes}
-          onClick={(dishId) => this.onDishSelect(dishId)}
-        />
         <DishDetail
           dish={
             this.state.dishes.filter(
@@ -74,7 +70,7 @@ class Main extends Component {
           />
           <Route exact path="/contactus" component={Contact} />
           <Route path="/menu/:dishId" component={DishWithId} />
-          <Route path="/aboutus" component={About} />
+          <Route path="/aboutus" component={()=> <About  leaders={this.state.leaders}/>} />
           <Redirect to="/home" />
         </Switch>
 
