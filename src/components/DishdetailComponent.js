@@ -27,9 +27,9 @@ function RenderDish(dish) {
   else return <div></div>;
 }
 
-function RenderComments(dish) {
-  if (dish != null && dish.comments != null) {
-    const commentlist = dish.comments.map((comment) => {
+function RenderComments(comment) {
+  if (comment != null && comment.comments != null) {
+    const commentlist = comment.comments.map((comment) => {
       const oldDate = new Date(comment.date);
       const options = { month: "long", day: "numeric", year: "numeric" };
       const formattedDate = oldDate.toLocaleDateString("en-US", options);
