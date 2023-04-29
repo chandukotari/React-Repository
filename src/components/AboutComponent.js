@@ -1,39 +1,32 @@
-import React from "react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Card,
-  CardBody,
-  CardHeader,
-  Media,
-} from "reactstrap";
-import { Link } from "react-router-dom";
-import { LEADERS } from "../shared/leaders";
+import React from 'react';
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 function RenderLeader({ leader }) {
-  return (
-    <div>
-      <div className="container">
-        <div className="row">
-          <div className="col-2">
-            <Media object src={leader.image} height="150" alt={leader.name} />
-          </div>
-          <div className="col-10">
-            <Media heading>{leader.name}</Media>
-            <p>{leader.designation}</p>
-            <p>{leader.description}</p>
-          </div>
-        </div>
-      </div>
-      <br></br>
-    </div>
-  );
+    return (
+      <Media tag="li">
+        <Media left middle>
+          <Media object src={leader.image} alt={leader.name} />
+        </Media>
+        <Media body className="ml-5">
+          <Media heading>{leader.name}</Media>
+          <p>{leader.designation}</p>
+          <p>{leader.description}</p>
+        </Media>
+      </Media>
+    );
 }
+
 function About(props) {
-  const leaders = props.leaders.map((leader) => {
-    return <RenderLeader leader={leader}></RenderLeader>;
-  });
-  return (
-    <div className="container">
+
+    const leaders = props.leaders.map((leader) => {
+        return (
+            <RenderLeader leader={leader} />
+        );
+    });
+
+    return(
+        <div className="container">
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
@@ -73,7 +66,6 @@ function About(props) {
                             <blockquote className="blockquote">
                                 <p className="mb-0">You better cut the pizza in four pieces because
                                     I'm not hungry enough to eat six.</p>
-                                    <br></br>
                                 <footer className="blockquote-footer">Yogi Berra,
                                 <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
                                     P. Pepe, Diversion Books, 2014</cite>
@@ -97,4 +89,4 @@ function About(props) {
     );
 }
 
-export default About;
+export default About;    
