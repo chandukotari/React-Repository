@@ -55,11 +55,8 @@ class CommentForm extends Component {
       }
       if (this.state.touched.Your_Name && Your_Name.length >15)
       {
-<<<<<<< Updated upstream
-      errors.Your_Name = "Must be 15 charactrers or";
-=======
+
       errors.Your_Name = "Must be 15 charactrers or less";
->>>>>>> Stashed changes
       }
       console.log(errors);
     return errors;
@@ -245,10 +242,7 @@ const DishDetail = (props) => {
     </div>
   );
 };
-<<<<<<< Updated upstream
 
 
-export default RenderComments;
-=======
 export default DishDetail;
->>>>>>> Stashed changes
+
